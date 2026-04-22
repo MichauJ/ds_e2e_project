@@ -31,6 +31,7 @@ list_of_files = [
     "setup.py",  # konfiguracja pakietu (instalacja projektu jako biblioteki)
     "research/research.ipynb",  # notebook do eksperymentów i analizy danych
     "templates/index.html",  # szablon HTML (np. dla prostego interfejsu webowego)
+    "app.py"
 ]
 
 # Iteruje po liście ścieżek plików, tworząc brakujące katalogi i pliki
