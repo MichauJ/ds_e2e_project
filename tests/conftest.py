@@ -1,11 +1,13 @@
 # tests/conftest.py
 import logging
 import pytest
+from ds_e2e_project import setup_logging
 
 @pytest.fixture(autouse=True)
 def reset_logging():
-    """Runs before every test — prevents handler duplication."""
     root = logging.getLogger()
     root.handlers.clear()
-    yield                      # test runs here
-    root.handlers.clear()      # cleanup after test
+    root.setLevel(logging.NOTSET)
+    setup_logging()              # ← re-run setup fresh for each test
+    yield
+    root.handlers.clear()

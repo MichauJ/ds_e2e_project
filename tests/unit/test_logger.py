@@ -3,7 +3,7 @@ import os
 import sys
 import logging
 import pytest
-from ds_e2e_project.logger import logger  # import from your src package
+from ds_e2e_project import logger  # import from your src package 
 
 
 class TestLoggingSetup:
@@ -32,11 +32,19 @@ class TestLoggingSetup:
         assert stream_handlers[0].stream == sys.stdout
 
     def test_info_message_written_to_file(self):
+        # record file size before writing
+        log_path = "logs/logging.log"
+        before = os.path.getsize(log_path) if os.path.exists(log_path) else 0
+
         logger.info("sentinel_test_message")
         for h in logging.getLogger().handlers:
             h.flush()
-        with open("logs/logging.log") as f:
-            assert "sentinel_test_message" in f.read()
+
+        with open(log_path) as f:
+            f.seek(before)           # ← only read what was written in this test
+            new_content = f.read()
+
+        assert "sentinel_test_message" in new_content
 
     def test_debug_message_not_written(self):
         logger.debug("should_not_appear")
