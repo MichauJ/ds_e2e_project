@@ -10,6 +10,7 @@ dependencies = [
     "flask-cors>=6.0.2",
     "ipykernel>=7.2.0",
     "joblib>=1.5.3",
+    "jupyter>=1.1.1",
     "matplotlib>=3.10.8",
     "mlflow>=3.11.1",
     "notebook>=7.5.5",
