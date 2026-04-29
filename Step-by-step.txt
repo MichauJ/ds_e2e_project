@@ -2,3 +2,7 @@
 2. Use template.py to create required files
 3. Set up logging functionality: see src/__init__,py and main.py
 4. Common utilities
+
+Issues to addres:
+Configuring where the data is coming from.
+Where the data is going to be stored
