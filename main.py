@@ -1,3 +1,9 @@
+import os
+import sys
+
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(project_root, "src"))
+
 from src.ds_e2e_project import logger
 from src.ds_e2e_project.pipeline.data_ingestion_pipeline import DataIngestionTrainingPipeline
 from src.ds_e2e_project.pipeline.data_validation_pipeline import DataValidationTrainingPipeline

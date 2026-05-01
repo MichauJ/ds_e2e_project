@@ -1,7 +1,6 @@
 from src.ds_e2e_project.config.configuration import ConfigurationManager
-from src.ds_e2e_project.entity.config_entity import ModelTrainingConfig
 from src.ds_e2e_project.components.model_training import ModelTraining
-from src.ds_e2e_project import logger
+
 
 STAGE_NAME = "Model Training stage"
 
