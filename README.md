@@ -1,6 +1,6 @@
 # ds_e2e_project
 
-### Workflows -- ML Pipeline -- Exctreme modular coding
+### Workflows -- ML Pipeline -- Extreme modular coding
 
 1. Data Ingestion
 2. Data Validation
