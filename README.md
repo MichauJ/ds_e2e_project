@@ -7,6 +7,7 @@
 3. Data Transformation --Feature Engineering, Data preprocessing
 4. Model Training
 5. Model Evaluation - MLFLOW, Dagshub
+6. Inference - frontend app created with Gradio
 
 ## Workflow
 
