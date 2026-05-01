@@ -11,3 +11,6 @@ COLUMNS:
   sulphates: float
   alcohol: float
   quality: int
+
+TARGET_COLUMN:
+  name: quality
